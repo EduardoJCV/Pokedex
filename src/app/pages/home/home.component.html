@@ -1,0 +1,9 @@
+
+<app-pokecards [pokemonsList]="pokemonsList" *ngIf="carga"></app-pokecards>
+
+<div class="center m-5" *ngIf="carga">
+    <button class="btn btn-block btn-primary" (click)="cargarMas()" >
+        <i *ngIf="loading" class="fas fa-sync-alt fa-spin"></i>
+         Cargar Mas
+    </button>
+</div>

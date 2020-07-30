@@ -1,0 +1,14 @@
+<table class="table" *ngIf="loading">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Movimientos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movimiento of pokemon.moves; let i = index">
+        <th scope="row"> {{ i+1 }} </th>
+        <td> {{ movimiento.move.name }} </td>
+      </tr>
+    </tbody>
+  </table>

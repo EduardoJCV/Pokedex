@@ -1,0 +1,31 @@
+<div class="m-5 container" *ngIf="!loading">
+  <h1>Ningun resultado</h1>
+</div>
+<div class="card mb-3" *ngIf="loading && pokemon">
+    <div class="row g-0">
+      <div class="col-md-3">
+        <img class="col-md-6" [src]="pokemon.sprites.front_default"  alt="...">
+        <img class="col-md-6" [src]="pokemon.sprites.back_default"  alt="...">
+        <img class="col-md-6" [src]="pokemon.sprites.front_shiny"  alt="...">
+        <img class="col-md-6" [src]="pokemon.sprites.back_shiny"  alt="...">
+      </div>
+      <div class="col-md-9">
+        <div class="card-body">
+          <h5 class="card-title"> {{ pokemon.name }} </h5>
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['pokemon-info']" routerLinkActive="active">Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['pokemon-movimientos']" routerLinkActive="active">Movimientos</a>
+            </li>
+          </ul>
+          <router-outlet>
+
+          </router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+
+

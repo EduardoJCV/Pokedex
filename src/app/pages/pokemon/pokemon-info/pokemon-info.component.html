@@ -1,0 +1,38 @@
+
+<div *ngIf="loading">
+    <h4>Tipos:</h4>
+    <button *ngFor="let tipo of pokemon.types" type="button" class="btn btn-outline-secondary"> {{ tipo.type.name }} </button>
+</div>
+<div *ngIf="loading">
+    <h4>abilidades:</h4>
+    <button *ngFor="let abilidad of pokemon.abilities" type="button" class="btn btn-outline-secondary"> {{ abilidad.ability.name }} </button>
+</div>
+<ul class="list-group m-2" *ngIf="loading">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        height :
+      <span class="badge bg-primary rounded-pill"> {{ pokemon.height }} </span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        weight :
+      <span class="badge bg-primary rounded-pill"> {{ pokemon.weight }} </span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        base_experience :
+      <span class="badge bg-primary rounded-pill"> {{ pokemon.base_experience }} </span>
+    </li>
+</ul>
+
+<!-- <table class="table" *ngIf="loading">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items">
+        <th scope="row">1</th>
+        <td>Mark</td>
+      </tr>
+    </tbody>
+  </table> -->
